@@ -1,0 +1,18 @@
+.container-input {
+    width: 446px;
+    height: 65px;
+    background: #F3EEF7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .input-field-Wraper {
+    margin-left: 19;
+} */
+.left-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}

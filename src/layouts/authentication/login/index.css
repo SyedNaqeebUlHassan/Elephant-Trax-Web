@@ -1,0 +1,28 @@
+.signIn-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+.socail-images-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 178px;
+    margin-top: 33px;
+}
+.socail-images {
+    width: 44px;
+    height: 44px;
+}
+.dnt-text {
+    font-family: 'inter';
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.sign-up-text {
+    color: #FF9A0D;
+}
