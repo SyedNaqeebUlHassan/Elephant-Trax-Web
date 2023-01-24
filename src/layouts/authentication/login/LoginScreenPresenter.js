@@ -12,10 +12,13 @@ import SecureEyeIcon from '../../../assets/images/SecureEye.png';
 import FbIcon from '../../../assets/images/FB.png';
 import GoogleIcon from '../../../assets/images/Google.png';
 import InstaIcon from '../../../assets/images/Insta.png';
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../constants";
 const { Title } = Typography;
 
 
 function LoginScreenPresenter() {
+  const navigate = useNavigate();
   return (
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
@@ -32,7 +35,7 @@ function LoginScreenPresenter() {
                   <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
                 </div>
                 <div style={{marginTop:30}}>
-                  <Button title='Sign In' style={styles.buttonStyle} />
+                  <Button onClick={()=>navigate(ROUTES.Home)} title='Sign In' style={styles.buttonStyle} />
                 </div>
                 <div style={{width:446,textAlign:'end'}}>
                   <Title level={5}>Forget Password</Title>

@@ -1,0 +1,13 @@
+.container-additems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;   
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    width:685px;
+    margin-top: 20px;
+}

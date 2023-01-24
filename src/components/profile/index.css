@@ -1,0 +1,14 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.img {
+    width: 68px;
+    height: 68px;
+}
+.profile-name {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}

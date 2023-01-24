@@ -13,9 +13,12 @@ import FbIcon from '../../../assets/images/FB.png';
 import GoogleIcon from '../../../assets/images/Google.png';
 import InstaIcon from '../../../assets/images/Insta.png';
 import AdminIcon from '../../../assets/images/Admin.png';
-const { Title } = Typography;
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../constants";
 
+const { Title } = Typography;
 function SignupScreenPresenter() {
+  const navigate = useNavigate();
   return (
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
@@ -32,7 +35,7 @@ function SignupScreenPresenter() {
                   <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
                 </div>
                 <div style={{marginTop:30}}>
-                  <Button title='Sign Up' style={styles.buttonStyle} />
+                  <Button onClick={()=>navigate(ROUTES.Login)} title='Sign Up' style={styles.buttonStyle} />
                 </div>
                 <Title level={5}>OR</Title>
                 <div className='socail-images-container'>

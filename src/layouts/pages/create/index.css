@@ -1,0 +1,30 @@
+.container {
+    width: 98%;
+    flex-wrap: wrap;
+}
+.OOPS {
+    width:320px;
+    height:397px;
+    background:#F6F6F6;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.opps-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+.btn-groupp {
+    display: flex;
+    justify-content: space-between;
+    width:585px;
+    margin-top: 20px;
+}

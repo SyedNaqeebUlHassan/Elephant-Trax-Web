@@ -11,7 +11,6 @@ function index({leftImageStyle,rightImageStyle,leftImage,placeholder,rightImage}
                 <img
                     style={leftImageStyle}
                     src={leftImage}
-                    alt='leftImage'
                 />
             </div>
             <div className='input-field-Wraper'>
@@ -19,7 +18,6 @@ function index({leftImageStyle,rightImageStyle,leftImage,placeholder,rightImage}
                     className='input-filed'
                     placeholder={placeholder}
                     style={{backgroundColor:'transparent',border:'none'}}
-
                 />
             </div>
         </div>

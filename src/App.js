@@ -4,6 +4,10 @@ import Login from "./layouts/authentication/login";
 import Signup from './layouts/authentication/sign-up';
 import Resetpassword from './layouts/authentication/reset-password';
 import CreatePassword from './layouts/authentication/create-password';
+import Home from './layouts/pages/home';
+import Create from './layouts/pages/create';
+import Additems from './layouts/pages/additems';
+import Profile from './layouts/pages/profile';
 function App() {
   return (
     <Routes>
@@ -27,8 +31,28 @@ function App() {
           path={ROUTES.Createpassword}
           element={<CreatePassword/>}
         />
+        <Route
+          exact
+          path={ROUTES.Home}
+          element={<Home/>}
+        />
+        <Route
+          exact
+          path={ROUTES.Create}
+          element={<Create/>}
+        />
+        <Route
+          exact
+          path={ROUTES.Additems}
+          element={<Additems/>}
+        />
+        <Route
+          exact
+          path={ROUTES.Profile}
+          element={<Profile/>}
+        />
     </Routes>
   );
-}
+};
 
 export default App;
