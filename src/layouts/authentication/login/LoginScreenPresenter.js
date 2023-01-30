@@ -12,9 +12,10 @@ import SecureEyeIcon from '../../../assets/images/SecureEye.png';
 import FbIcon from '../../../assets/images/FB.png';
 import GoogleIcon from '../../../assets/images/Google.png';
 import InstaIcon from '../../../assets/images/Insta.png';
+
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants";
-const { Title } = Typography;
+import { ROUTES,BTN,COLOR,FontFamily,TEXT,PLACEHOLDERS } from "../../../constants";
+const { Title,Paragraph } = Typography;
 
 
 function LoginScreenPresenter() {
@@ -22,25 +23,29 @@ function LoginScreenPresenter() {
   return (
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
-            <PrimaryGrid headerText='Welecome Back'/>
+            <PrimaryGrid headerText={TEXT.GridText.HeaderText.WelcomeBack}/>
         </Col>
-        <Col span={12} className='SignIn-Grid'>
-            <div className='signIn-container'>
-                <Title>Hello!</Title>
-                <Title level={4}>Sign In Your Account</Title>
-                <div style={{marginTop:54}}>
-                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder="Enter Your Email"/>
+        <Col className='login-Grid' span={12} >
+            <div className='login-container'>
+                <Title className='hello-text-login'>{TEXT.GridText.HeaderText.Hello}</Title>
+              <div className='paragarph-text-loginin'>
+                <Title level={4}>{TEXT.GridText.ParagraphText.SignInYourAccount}</Title>
+              </div>
+                <div style={styles.marginTop54}>
+                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourEmail}/>
                 </div>
-                <div style={{marginTop:30}}>
-                  <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
+                <div style={styles.marginTop30}>
+                  <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourPassword} rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
                 </div>
-                <div style={{marginTop:30}}>
-                  <Button onClick={()=>navigate(ROUTES.Home)} title='Sign In' style={styles.buttonStyle} />
+                <div style={styles.marginTop30}>
+                  <Button onClick={()=>navigate(ROUTES.Home)} title={BTN.SignIn} />
                 </div>
-                <div style={{width:446,textAlign:'end'}}>
-                  <Title level={5}>Forget Password</Title>
+                <div className='forgetPassword'>
+                  <Paragraph style={styles.forgetPasswordText}>{TEXT.GridText.ParagraphText.ForgotPassword}</Paragraph>
                 </div>
-                <Title level={5}>OR</Title>
+                <div className='or'>
+                  <Paragraph style={styles.or} level={5}>{TEXT.GridText.ParagraphText.OR}</Paragraph>
+                </div>
                 <div className='socail-images-container'>
                   <div>
                     <img 
@@ -65,7 +70,7 @@ function LoginScreenPresenter() {
                     />
                   </div>
                 </div>
-                <Title level={5} className='dnt-text'>Don’t have an account! <span className='sign-up-text'>Sign Up</span></Title>
+                <Title level={5} className='dnt-text'>{TEXT.GridText.ParagraphText.DontHaveAnAccount}<span className='sign-up-text'>{TEXT.GridText.ParagraphText.SignUp}</span></Title>
             </div>
          </Col>
         
@@ -99,4 +104,29 @@ const styles={
     background:'#FF9A0D',
     borderRadius: 10,
   },
+  or:{
+    fontFamily:`${FontFamily.fontSanic}`,
+    fontStyle:'normal',
+    fontWeight:'700',
+    fontSize:'20px',
+    lineHeight:'24px',
+    color:`${COLOR.SecondaryTextColor}`,
+    marginTop:57,
+   },
+   marginTop30:{
+    marginTop:30
+   },
+   marginTop54:{
+    marginTop:54
+   },
+   forgetPasswordText:{
+    width:446,
+    textAlign:'end',
+    fontFamily:`${FontFamily.fontInter}`,
+    fontStyle:'normal',
+    fontWeight:'400',
+    fontSize:'18px',
+    lineHeight:'22px',
+    marginTop:13
+   },
 }

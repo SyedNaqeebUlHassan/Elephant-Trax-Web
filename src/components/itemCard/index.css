@@ -1,0 +1,51 @@
+.card-item-main-div {
+    display: flex;
+    justify-content: space-around;
+    width:98%;
+    height: 164%;
+    align-items: center;
+    margin-top: 34px;
+}
+.productImage {
+    width: 143px;
+    height: 136px;
+}
+.seceond-div {
+    width: 80%;
+   
+}
+.editImage {
+    width: 40.9px;
+    height: 39px;
+
+}
+.item-editimage-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.keyword-text {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.keyword-div {
+    width: 122.65px;
+    height: 43px;
+    background: rgba(255, 154, 13, 0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-left:20px;
+}
+.itemno-text {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}

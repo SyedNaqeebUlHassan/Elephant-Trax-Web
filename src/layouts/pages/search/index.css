@@ -1,0 +1,14 @@
+.input-search-div {
+    width: 98%;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+.search-image {
+    width:25.57px;
+    height:25.59px;
+    margin-right: 20px;  
+}

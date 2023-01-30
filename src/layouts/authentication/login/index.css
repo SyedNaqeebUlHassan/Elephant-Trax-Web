@@ -1,4 +1,4 @@
-.signIn-container {
+.login-container {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -25,4 +25,80 @@
 }
 .sign-up-text {
     color: #FF9A0D;
+}
+@media (max-width: 480px) {
+    .login-container  {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10vh;
+        margin-left: -350px;
+        
+    }
+    .hello-text-login {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: -50px;
+        margin-left: 150px;
+    }
+    .paragarph-text-loginin {
+        width: 300px;
+        margin-top: -30px;
+        margin-left: 150px;
+    }
+    .or {
+        margin-left: 170px;
+        margin-top: -150px;
+        width: 60px;
+    }
+    .socail-images-container {
+        margin-left: 150px;
+        margin-top: -10px;
+    }
+    .dnt-text {
+        width: 300px;
+        margin-left: 150px;
+    }
+  }
+  @media only screen and (min-width:481px) and (max-width: 768px) {
+    .login-container  {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .hello-text-login {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: -50px;
+        margin-left: 100px;
+    }
+    .paragarph-text-loginin {
+        width: 300px;
+        margin-top: -30px;
+        margin-left: 150px;
+    }
+    .or {
+        margin-left: 170px;
+        margin-top: -150px;
+        width: 60px;
+    }
+    .socail-images-container {
+        margin-left: 150px;
+        margin-top: -10px;
+    }
+    .dnt-text {
+        width: 300px;
+        margin-left: 150px;
+    }
+    .login-Grid {
+        margin-right: 300px;
+    }
+    .forgetPassword {
+        margin-left: 200px;
+    }
 }

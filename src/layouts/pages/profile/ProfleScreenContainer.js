@@ -1,7 +1,8 @@
 import React from 'react';
 import ProfileScreenPresenter from './ProfileScreenPresenter';
 function ProfleScreenContainer() {
-  return <ProfileScreenPresenter/>;
+
+  return <ProfileScreenPresenter />;
 };
 
 export default ProfleScreenContainer;

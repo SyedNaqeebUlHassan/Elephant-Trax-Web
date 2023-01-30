@@ -1,0 +1,31 @@
+.radio-group-btn {
+    margin-top: 22px;
+}
+.filterImage {
+    width:30.08px;
+    height:30px;
+    margin-left: 20px;
+}
+.radio-group-btn {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-category-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.by-boxNo-main-div {
+    width: 98%;
+    height: 100%;
+    background: #F6F6F6;
+    backdrop-filter: blur(15px);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}

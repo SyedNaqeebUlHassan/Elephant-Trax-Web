@@ -24,6 +24,7 @@ function index({leftImageStyle,rightImageStyle,leftImage,placeholder,rightImage}
         <div className='right-container'>
             <div style={{marginLeft:130}}>
                 <img
+                    className='rightImage'
                     style={rightImageStyle}
                     src={rightImage}
                 />

@@ -13,31 +13,36 @@ import FbIcon from '../../../assets/images/FB.png';
 import GoogleIcon from '../../../assets/images/Google.png';
 import InstaIcon from '../../../assets/images/Insta.png';
 import AdminIcon from '../../../assets/images/Admin.png';
-import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants";
 
-const { Title } = Typography;
+import { useNavigate } from "react-router-dom";
+import { ROUTES,BTN,COLOR,FontFamily,TEXT,PLACEHOLDERS } from "../../../constants";
+
+const { Title,Paragraph } = Typography;
 function SignupScreenPresenter() {
   const navigate = useNavigate();
   return (
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
             <div className='signIn-container'>
-                <Title>Hello!</Title>
-                <Title level={4}>Sign create your account</Title>
-                <div style={{marginTop:54}}>
-                  <InputField leftImage={AdminIcon} leftImageStyle={styles.adminImageStyle} placeholder="Enter Your Name"/>
+                <Title className='hello-text'>{TEXT.GridText.HeaderText.Hello}</Title>
+                <div className='paragarph-text-signin'>
+                  <Title level={4}>{TEXT.GridText.ParagraphText.SignCreateYourAccount}</Title>
                 </div>
-                <div style={{marginTop:30}}>
-                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder="Enter Your Email"/>
+                <div style={styles.marginTop54}>
+                  <InputField leftImage={AdminIcon} leftImageStyle={styles.adminImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourName}/>
                 </div>
-                <div style={{marginTop:30}}>
-                  <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
+                <div style={styles.marginTop30}>
+                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourEmail}/>
                 </div>
-                <div style={{marginTop:30}}>
-                  <Button onClick={()=>navigate(ROUTES.Login)} title='Sign Up' style={styles.buttonStyle} />
+                <div style={styles.marginTop30}>
+                  <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourPassword} rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
                 </div>
-                <Title level={5}>OR</Title>
+                <div style={styles.marginTop30}>
+                  <Button className='signup-btn-home'  onClick={()=>navigate(ROUTES.Login)} title={BTN.SignUp}  />
+                </div>
+                <div className='or'>
+                  <Paragraph style={styles.or} level={5}>{TEXT.GridText.ParagraphText.OR}</Paragraph>
+                </div>
                 <div className='socail-images-container'>
                   <div>
                     <img 
@@ -51,7 +56,6 @@ function SignupScreenPresenter() {
                       className='socail-images'
                       src={GoogleIcon}
                       alt='FB ICon'
-
                     />
                   </div>
                   <div>
@@ -62,11 +66,11 @@ function SignupScreenPresenter() {
                     />
                   </div>
                 </div>
-                <Title level={5} className='dnt-text'>Don’t have an account! <span className='sign-up-text'>Sign In</span></Title>
+                <Title level={5} className='dnt-text'>{TEXT.GridText.ParagraphText.DontHaveAnAccount} <span className='sign-up-text'>{TEXT.GridText.ParagraphText.SignIn}</span></Title>     
             </div>
         </Col>
         <Col span={12} className='SignIn-Grid'>
-            <PrimaryGrid headerText='Create Your Account'/>
+            <PrimaryGrid headerText={TEXT.GridText.HeaderText.CreateYourAccount}/>
          </Col> 
     </Row>
   )
@@ -95,7 +99,7 @@ const styles={
  buttonStyle:{
    width:446,
    height:65,
-   background:'#FF9A0D',
+   background:`${COLOR.BtnColor}`,
    borderRadius: 10,
  },
  adminImageStyle:{
@@ -103,5 +107,20 @@ const styles={
   height:36,
   marginLeft:26,
   marginRight:18,
+ },
+ or:{
+  fontFamily:`${FontFamily.fontSanic}`,
+  fontStyle:'normal',
+  fontWeight:'700',
+  fontSize:'20px',
+  lineHeight:'24px',
+  color:`${COLOR.SecondaryTextColor}`,
+  marginTop:57,
+ },
+ marginTop30:{
+  marginTop:30
+ },
+ marginTop54:{
+  marginTop:54
  }
 }

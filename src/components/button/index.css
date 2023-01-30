@@ -1,0 +1,35 @@
+.btn-component {
+    width: 446px;
+    height: 65px;
+    background: #FF9A0D;
+    border-radius: 10px;
+}
+@media (max-width: 480px) {
+.btn-component {
+    width: 300px;
+    height: 65px;
+    margin-left: 150px;
+    background: #FF9A0D;
+    border-radius: 10px;
+    margin-top: -30px;
+}
+}
+@media only screen and (min-width:481px) and (max-width: 768px) {
+    .btn-component {
+        width: 400px;
+        height: 65px;
+        margin-left: 250px;
+        background: #FF9A0D;
+        border-radius: 10px;
+        margin-top: -30px;
+    }
+}
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+    .btn-component {
+        width: 300px;
+        height: 65px;
+        background: #FF9A0D;
+        border-radius: 10px;
+        margin-top: -30px;
+    }
+}

@@ -26,3 +26,94 @@
 .sign-up-text {
     color: #FF9A0D;
 }
+
+@media (max-width: 480px) {
+    .signIn-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .hello-text {
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        width: 100%;
+        margin-left: 80px;
+        margin-top: -50px;
+    }
+    .paragarph-text-signin {
+        margin-left: 150px;
+        width: 300px;
+        margin-top: -30px;
+    }
+    .or {
+        margin-left: 170px;
+        margin-top: -50px;
+        width: 60px;
+    }
+    .socail-images-container {
+        margin-left: 150px;
+        margin-top: -10px;
+    }
+    .dnt-text {
+        width: 300px;
+        margin-left: 150px;
+    }
+  }
+  @media only screen and (min-width:481px) and (max-width: 768px) {
+    .signIn-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .hello-text {
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        width: 100%;
+        margin-left: 80px;
+        margin-top: -50px;
+    }
+    .paragarph-text-signin {
+        margin-left: 150px;
+        width: 300px;
+        margin-top: -30px;
+    }
+    .or {
+        margin-left: 270px;
+        margin-top: -50px;
+        width: 60px;
+    }
+    .socail-images-container {
+        margin-left: 250px;
+        margin-top: -10px;
+    }
+    .dnt-text {
+        width: 400px;
+        margin-left: 250px;
+    }
+  }
+  @media only screen and (min-width:769px) and (max-width: 1024px) {
+    .signIn-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .hello-text {
+        margin-top: -40px;
+    }
+    .or {
+        margin-top: -40px;
+        width: 60px;
+    }
+    .socail-images-container {
+        margin-top: 0px;
+        margin-right: 20px;
+    }
+  }

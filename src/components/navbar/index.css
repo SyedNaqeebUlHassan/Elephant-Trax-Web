@@ -8,7 +8,7 @@
     flex-direction: column;
     width: 165px;
     height: 100%;
-    margin-top:7.82472613458529vh;
+    margin-top:4.82472613458529vh;
 }
 .logo {
     width: 76.9px;
@@ -63,4 +63,13 @@
 }
 .img-container {
     margin-top: 40px;
+}
+@media (max-width: 480px) {
+    .navbar-container {
+        display: none;
+    }
+    .mobile-navbar-container {
+        display: none;
+
+    }
 }

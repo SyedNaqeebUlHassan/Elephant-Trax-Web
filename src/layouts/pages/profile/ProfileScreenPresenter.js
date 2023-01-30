@@ -10,18 +10,19 @@ import { Typography,Select,DatePicker, Space } from 'antd';
 import AvatarImage from '../../../assets/images/Avatar.png';
 import CameraImage from '../../../assets/images/cameraimagee.png';
 
+import { ROUTES,BTN,COLOR,TEXT,PLACEHOLDERS} from "../../../constants";
 const {Title,Paragraph}=Typography;
 const { Option } = Select;
 
 function ProfileScreenPresenter() {
   return (
     <Row>
-      <Col style={{display:'flex',alignItems:'center',justifyContent:'center'}} span={4}>
+      <Col style={styles.navbarWraper} span={4}>
         <Navbar/>
       </Col>
       <Col span={20} >
         <div className='container'>
-            <Header headerText='Profile' text='Here you can create your profile.'/>
+            <Header headerText={TEXT.ScreenText.HeaderText.Profile} text={TEXT.ScreenText.ParagraphText.ProfileScreen}/>
             <div className='information-container'>
                 <div className='img-container'>
                     <img
@@ -38,53 +39,53 @@ function ProfileScreenPresenter() {
                     </div>
                 </div>
                 <div className='name-container'>
-                    <Title level={2}>M.Shahrukh Khan</Title>
-                    <Paragraph>Write your passion</Paragraph>
+                    <Title level={2}>{TEXT.FullName}</Title>
+                    <Paragraph>{TEXT.WriteYourPassion}</Paragraph>
 
                 </div>
             </div>
             <div className='form'>
                 <div className='wraper'>
                     <div >
-                        <Title level={3}>First Name</Title>
-                        <Input placeholder='Shahrukh Khan'/>
+                        <Title level={3}>{TEXT.FormText.FirstName}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.FirstName}/>
                     </div>
                     <div>
-                        <Title level={3}>Last Name</Title>
-                        <Input placeholder='Yousafzai'/>
+                        <Title level={3}>{TEXT.FormText.LastName}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.LastName}/>
                     </div>
                 </div>
                 <div className='wraper'>
                     <div >
-                        <Title level={3}>Email</Title>
-                        <Input placeholder='something@gmail.com'/>
+                        <Title level={3}>{TEXT.FormText.Email}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.Email}/>
                     </div>
                     <div>
-                        <Title level={3}>Confirm Email</Title>
-                        <Input placeholder='something@gmail.com'/>
+                        <Title level={3}>{TEXT.FormText.ConfirmEmail}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.Email}/>
                     </div>
                 </div>
                 <div className='wraper'>
                     <div >
-                        <Title level={3}>Password</Title>
-                        <Input placeholder='Shahrukh123456@'/>
+                        <Title level={3}>{TEXT.FormText.Password}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.Password}/>
                     </div>
                     <div>
-                        <Title level={3}>Confirm Password</Title>
-                        <Input placeholder='Shahrukh123456@'/>
+                        <Title level={3}>{TEXT.FormText.ConfirmPassword}</Title>
+                        <Input placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.Password}/>
                     </div>
                 </div>
                 <div className='wraper'>
                     <div >
-                       <Title level={3}>Gender</Title>
-                       <Select placeholder="Male/Female" style={{width:446}}>
-                            <Option value="male">male</Option>
-                            <Option value="female">female</Option>
-                            <Option value="other">other</Option>
+                       <Title level={3}>{TEXT.FormText.Gender}</Title>
+                       <Select placeholder={PLACEHOLDERS.ProfileScreenPlaceholders.MaleFemale} style={{width:446}}>
+                            <Option value={PLACEHOLDERS.ProfileScreenValue.Male}></Option>
+                            <Option value={PLACEHOLDERS.ProfileScreenValue.Female}>{TEXT.FormText.Female}</Option>
+                            <Option value={PLACEHOLDERS.ProfileScreenValue.Other}>{TEXT.FormText.Other}</Option>
                         </Select>
                     </div>
                     <div>
-                        <Title level={3}>D/O/B</Title>
+                        <Title level={3}>{TEXT.FormText.DOB}</Title>
                         <Space style={{width:446}}>
                             <DatePicker/>
                         </Space>
@@ -92,7 +93,7 @@ function ProfileScreenPresenter() {
                 </div>
             </div>
             <div style={{marginTop:20}}>
-                <Button title='Save Setting' style={styles.btn}/>
+                <Button title={BTN.SaveSetting} style={styles.btn}/>
             </div>
         </div>
       </Col>
@@ -105,7 +106,12 @@ const styles={
     btn:{
         width:1070,
         height:50,
-        background:'#FF9A0D',
+        background:`${COLOR.BtnColor}`,
         borderRadius:10,
-    }
+    },
+    navbarWraper:{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center'
+    },
 }

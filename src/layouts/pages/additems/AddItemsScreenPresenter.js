@@ -4,28 +4,29 @@ import { Col, Row } from 'antd';
 import Header from '../../../components/header';
 import Card from '../../../components/card';
 import Navbar from '../../../components/navbar';
-import Button from '../../../components/button';
 /////Images////////
 import CameraImage from '../../../assets/images/CameraImage.png';
 import AttachImage from '../../../assets/images/AttachImage.png';
 import ProductImage from '../../../assets/images/ProductImage.png';
 
+import {COLOR,TEXT} from "../../../constants";
+import { useSelector } from 'react-redux';
+
 function AddItemsScreenPresenter() {
+
+  const data=useSelector(state=>state.dataSlice);
+  console.log(data);
   return (
     <Row>
-      <Col style={{display:'flex',alignItems:'center',justifyContent:'center'}} span={4}>
+      <Col style={styles.navbarWraper} span={4}>
         <Navbar/>
       </Col>
       <Col span={20}>
         <div className='container'>
-          <Header headerText='ADD ITEMS' text='Here you can create your package or find your box.'/>
+          <Header headerText={TEXT.ScreenText.HeaderText.AddItems} text={TEXT.ScreenText.ParagraphText.AdditemsScreen}/>
         </div>
           <div className='container-additems'>
-            <Card containerStyle={styles.card} BoxNoHeader='Box No: 03' level={5} leftHedaerSocialImage={AttachImage} leftHedaerSocialImageStyle={styles.attachImage} rightHeaderSocialImage={CameraImage} rightHeaderSocialImageStyle={styles.cameraImage} miniCard={styles.miniCard} miniCardImage={ProductImage} miniCardImageStyle={styles.productImage} isKeyword='true' />      
-          <div className='btn-group'>
-                <Button title='Create' style={styles.btn}/>
-                <Button title='Add Items' style={styles.btn}/>
-          </div>
+            <Card isBtnGroupShown='true' containerStyle={styles.card} BoxNoHeader={TEXT.BoxNo} level={5} leftHedaerSocialImage={AttachImage} leftHedaerSocialImageStyle={styles.attachImage} rightHeaderSocialImage={CameraImage} rightHeaderSocialImageStyle={styles.cameraImage} miniCard={styles.miniCard} miniCardImage={ProductImage} miniCardImageStyle={styles.productImage} isKeyword='true' />           
           </div>
       </Col>
     </Row>
@@ -39,7 +40,7 @@ const styles={
       {
         width:685,
         height:516,
-        background:'#F6F6F6',
+        background:`${COLOR.CardBackgroundColor}`,
         backdropFilter:'blur(15)',
         borderRadius:10,
         display:'flex',
@@ -68,19 +69,16 @@ const styles={
         height:33,
         marginLeft:10
       },
-    btn:
-      {
-        width:362.5,
-        height:50,
-        background:'linear-gradient(90deg, #FF9A0D 0%, #FF9A0D 100%)',
-        boxShadow:' 0px 130px 52px rgba(0, 0, 0, 0.01), 0px 73px 44px rgba(0, 0, 0, 0.03), 0px 33px 33px rgba(0, 0, 0, 0.04), 0px 8px 18px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05)',
-        borderRadius:5,
-      },
     miniCard:
       {
         width:655,
         height:216,
-        background: 'rgba(255, 154, 13, 0.5)',
+        background: `${COLOR.OrangeColor}`,
         borderRadius:10,
-      }
+      },
+    navbarWraper:{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center'
+      },
     }

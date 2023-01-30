@@ -8,30 +8,34 @@ import { Typography } from 'antd';
 //////////Images//////////////////////////
 import PasswordIcon from '../../../assets/images/Password.png';
 import SecureEyeIcon from '../../../assets/images/SecureEye.png';
-const { Title } = Typography;
+
+import { ROUTES,BTN,COLOR,TEXT,PLACEHOLDERS } from "../../../constants";
+const { Title,Paragraph } = Typography;
 
 function CreatePasswordScreenPresenter() {
   return (
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
-            <PrimaryGrid headerText='Create New Password'/>                  
+            <PrimaryGrid headerText={TEXT.GridText.HeaderText.CreateNewPassword}/>                  
         </Col>
         <Col span={12} className='SignIn-Grid'>
-            <div className='signIn-container'>
-                <Title>Create New Password</Title>
-                <div style={styles.textWraper}>
-                    <Title level={4} style={{textAlign:'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem psum has been the industry's standard I dummy text ever since the 1500s,</Title>
-                </div>
-                <div style={{marginTop:54}}>
-                    <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
-                </div>
-                <div style={{marginTop:30}}>
-                    <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder="Enter Your Password" rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
-                </div>
-                <div style={{marginTop:30}}>
-                <Button title='Reset Password' style={styles.buttonStyle} />
-                </div>
-            </div>
+          <div className='wraper-create'>
+              <div className='signIn-container'>
+                  <p className='reset-your-password-rest'>{TEXT.GridText.HeaderText.CreateNewPassword}</p>
+                  <div style={styles.textWraper}>
+                    <Paragraph className='paragraph-rest-password'>{TEXT.GridText.ParagraphText.SecondaryParagraph}</Paragraph>
+                  </div>
+                  <div style={styles.marginTop54}>
+                      <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourPassword} rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
+                  </div>
+                  <div style={styles.marginTop30}>
+                      <InputField leftImage={PasswordIcon} leftImageStyle={styles.passwordImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourPassword} rightImage={SecureEyeIcon} rightImageStyle={styles.secureeyeImageStyle}/>
+                  </div>
+                  <div style={styles.marginTop30}>
+                  <Button title={BTN.Resetpassword}  />
+                  </div>
+              </div>
+             </div>
         </Col>
     </Row>
   )
@@ -43,7 +47,7 @@ const styles={
    buttonStyle:{
      width:446,
      height:65,
-     background:'#FF9A0D',
+     background:`${COLOR.BtnColor}`,
      borderRadius: 10,
    },
    textWraper:{
@@ -60,5 +64,14 @@ const styles={
        width:33,
        height:21,
        marginRight:30,
-      },
+    },
+    secondaryParagraph:{
+      textAlign:'center',
+     },
+    marginTop30:{
+      marginTop:30
+    },
+    marginTop54:{
+      marginTop:54
+    }
  }

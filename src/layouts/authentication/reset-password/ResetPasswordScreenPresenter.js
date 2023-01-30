@@ -6,8 +6,11 @@ import InputField from '../../../components/input';
 import Button from '../../../components/button';
 import { Typography } from 'antd';
 //////////Images//////////////////////////
-import EmailIcon from '../../../assets/images/Email.png'; 
-const { Title } = Typography;
+import EmailIcon from '../../../assets/images/Email.png';
+
+import { ROUTES,BTN,COLOR,TEXT,PLACEHOLDERS } from "../../../constants";
+const { Title,Paragraph } = Typography;
+
 
 
 function ResetPasswordScreenPresenter() {
@@ -15,20 +18,20 @@ function ResetPasswordScreenPresenter() {
     <Row gutter={{xs:1,sm:1,md:2,lg:2,xl:2}}>
         <Col span={12} className='Welecome-Grid'>
             <div className='signIn-container'>
-                <Title>Reset Your Password</Title>
+                <p className='reset-your-password-rest'>{TEXT.GridText.HeaderText.ResetYourPassword}</p>
                 <div style={styles.textWraper}>
-                  <Title level={4} style={{textAlign:'center'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem psum has been the industry's standard I dummy text ever since the 1500s,</Title>
+                  <Paragraph className='paragraph-rest-password'>{TEXT.GridText.ParagraphText.SecondaryParagraph}</Paragraph>
                 </div>
-                <div style={{marginTop:54}}>
-                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder="Enter Your Email"/>
+                <div style={styles.marginTop30}>
+                  <InputField leftImage={EmailIcon} leftImageStyle={styles.emailImageStyle} placeholder={PLACEHOLDERS.AuthanticationPlaceholders.EnterYourEmail}/>
                 </div>
-                <div style={{marginTop:30}}>
-                  <Button title='Send Email' style={styles.buttonStyle} />
+                <div style={styles.marginTop30}>
+                  <Button title={BTN.SendEmail}  />
                 </div>
             </div>
         </Col>
         <Col span={12} className='SignIn-Grid'>
-            <PrimaryGrid headerText='Reset Your Password'/>       
+            <PrimaryGrid headerText={TEXT.GridText.HeaderText.ResetYourPassword}/>       
         </Col>
   </Row>
   )
@@ -46,11 +49,17 @@ const styles={
    buttonStyle:{
      width:446,
      height:65,
-     background:'#FF9A0D',
+     background:`${COLOR.BtnColor}`,
      borderRadius: 10,
    },
    textWraper:{
       width:466,
       height:125
+   },
+   marginTop30:{
+    marginTop:30
+   },
+   secondaryParagraph:{
+    textAlign:'center',
    }
  }

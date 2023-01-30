@@ -11,27 +11,29 @@ import CameraImage from '../../../assets/images/CameraImage.png';
 import AttachImage from '../../../assets/images/AttachImage.png';
 import ProductImage from '../../../assets/images/ProductImage.png';
 
+import { ROUTES,BTN,COLOR,TEXT} from "../../../constants";
+
 function CreateScreenPresenter() {
   return (
     <Row>
-      <Col style={{display:'flex',alignItems:'center',justifyContent:'center'}} span={4}>
+      <Col style={styles.navbarWraper} span={4}>
         <Navbar/>
       </Col>
       <Col span={20}>
           <div className='container'>
-            <Header headerText='CREATE PACKAGE' text='Here you can create your package or find your box.'/>      
-            <Row style={{marginTop:60}}>
+            <Header headerText={TEXT.ScreenText.HeaderText.CreatePackage} text={TEXT.ScreenText.ParagraphText.HomeScreen$CreateScreen}/>      
+            <Row style={styles.marginTop60}>
                 <Col span={16}>
-                  <Card level={5} containerStyle={styles.card} righHeadertText='Category' rightHeaderImage={DropdownImage} rightHeaderImageStyle={styles.dropdown} mainImage={ProductImage} mainImageStyle={styles.productImage} footerBoxNo='Box No: 03' foterLeftImage={AttachImage} foterLeftImageStyle={styles.attachImage} foterRightImage={CameraImage} foterRightImageStyle={styles.cameraImage} rightHeaderStyle={styles.rightHeaderContainer}/>
+                  <Card level={5} containerStyle={styles.card} righHeadertText={TEXT.Category} rightHeaderImage={DropdownImage} rightHeaderImageStyle={styles.dropdown} mainImage={ProductImage} mainImageStyle={styles.productImage} footerBoxNo={TEXT.BoxNo} foterLeftImage={AttachImage} foterLeftImageStyle={styles.attachImage} foterRightImage={CameraImage} foterRightImageStyle={styles.cameraImage} rightHeaderStyle={styles.rightHeaderContainer}/>
                   <div className='btn-groupp'>
-                    <Button title='Create' style={styles.btn}/>
-                    <Button title='Add Items' style={styles.btn}/>
+                    <Button title={BTN.Create} style={styles.btn}/>
+                    <Button title={BTN.AddItems} style={styles.btn}/>
                   </div>
                 </Col>
                 <Col span={2}>
                   <div className='OOPS'>
-                        <p className='opps-text'>OOPS</p>
-                        <p className='opps-text' style={{marginTop:-20}}>You don’t create any package</p>
+                        <p className='opps-text'>{TEXT.OOPS}</p>
+                        <p className='opps-text' style={styles.dontHaveText}>{TEXT.YouDontCreateAnyPackage}</p>
                   </div>
                 </Col>
             </Row>
@@ -48,7 +50,7 @@ const styles={
     {
       width:585,
       height:397,
-      background:'#F6F6F6',
+      background:`${COLOR.CardBackgroundColor}`,
       backdropFilter:'blur(15)',
       borderRadius:10,
       display:'flex',
@@ -92,8 +94,19 @@ const styles={
     {
       width:262.5,
       height:50,
-      background:'linear-gradient(90deg, #FF9A0D 0%, #FF9A0D 100%)',
+      background:`${COLOR.BtnLinerColor}`,
       boxShadow:' 0px 130px 52px rgba(0, 0, 0, 0.01), 0px 73px 44px rgba(0, 0, 0, 0.03), 0px 33px 33px rgba(0, 0, 0, 0.04), 0px 8px 18px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05)',
       borderRadius:5,
+    },
+    navbarWraper:{
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center'
+    },
+    marginTop60:{
+      marginTop:60
+    },
+    dontHaveText:{
+      marginTop:-20,
     }
   }

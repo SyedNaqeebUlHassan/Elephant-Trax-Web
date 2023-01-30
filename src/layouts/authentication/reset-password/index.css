@@ -5,3 +5,49 @@
     flex-direction: column;
     margin-top: 10vh;
 }
+.reset-your-password-rest {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+}
+@media (max-width: 480px) {
+    .reset-your-password-rest {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 42px;
+        width: 300px;
+        margin-left: 150px;
+    }
+    .paragraph-rest-password {
+        margin-left: 160px;
+    }
+  }
+  @media only screen and (min-width:481px) and (max-width: 768px) {
+    .reset-your-password-rest {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 42px;
+        width: 300px;
+        margin-left: 150px;
+    }
+    .paragraph-rest-password {
+        margin-left: 160px;
+    }
+    @media only screen and (min-width:769px) and (max-width: 1024px) {
+        .reset-your-password-rest {
+            font-family: 'Public Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 42px;
+            width: 300px;
+            margin-left: 150px;
+        }
+    }
+  }
